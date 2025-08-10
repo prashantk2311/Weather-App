@@ -1,0 +1,60 @@
+/* Weather Icons CSS - same as previous version */
+@font-face {
+    font-family: 'weathericons';
+    src: url('../fonts/weathericons-regular-webfont.eot');
+    src: url('../fonts/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/weathericons-regular-webfont.woff2') format('woff2'),
+         url('../fonts/weathericons-regular-webfont.woff') format('woff'),
+         url('../fonts/weathericons-regular-webfont.ttf') format('truetype'),
+         url('../fonts/weathericons-regular-webfont.svg#weather_iconsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wi {
+    display: inline-block;
+    font-family: 'weathericons';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wi-day-sunny:before { content: "\f00d"; }
+.wi-day-cloudy:before { content: "\f002"; }
+.wi-day-cloudy-high:before { content: "\f07d"; }
+.wi-day-sunny-overcast:before { content: "\f00c"; }
+.wi-day-thunderstorm:before { content: "\f010"; }
+.wi-day-rain:before { content: "\f008"; }
+.wi-day-snow:before { content: "\f00a"; }
+.wi-day-hail:before { content: "\f00b"; }
+.wi-day-lightning:before { content: "\f00e"; }
+.wi-day-fog:before { content: "\f003"; }
+
+.wi-night-clear:before { content: "\f02e"; }
+.wi-night-cloudy:before { content: "\f031"; }
+.wi-night-alt-cloudy-high:before { content: "\f07e"; }
+.wi-night-partly-cloudy:before { content: "\f083"; }
+.wi-night-thunderstorm:before { content: "\f03b"; }
+.wi-night-rain:before { content: "\f036"; }
+.wi-night-snow:before { content: "\f038"; }
+.wi-night-hail:before { content: "\f037"; }
+.wi-night-lightning:before { content: "\f03a"; }
+.wi-night-fog:before { content: "\f04a"; }
+
+.wi-thunderstorm:before { content: "\f01e"; }
+.wi-sprinkle:before { content: "\f01c"; }
+.wi-rain:before { content: "\f019"; }
+.wi-snow:before { content: "\f01b"; }
+.wi-hail:before { content: "\f015"; }
+.wi-fog:before { content: "\f014"; }
+.wi-strong-wind:before { content: "\f050"; }
+.wi-windy:before { content: "\f021"; }
+.wi-humidity:before { content: "\f07a"; }
+.wi-barometer:before { content: "\f079"; }
+.wi-sunrise:before { content: "\f051"; }
+.wi-sunset:before { content: "\f052"; }
+.wi-night-alt-rain:before { content: "\f028"; }
+.wi-night-alt-snow:before { content: "\f02a"; }
+.wi-night-alt-cloudy:before { content: "\f086"; }

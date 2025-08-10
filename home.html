@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere - Modern Weather App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="app-title">WeatherSphere</h1>
+            <div class="theme-toggle">
+                <button id="theme-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="weather-app">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="city-input" placeholder="Enter city name or 'City, Country'..." autocomplete="off">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                    <button id="location-btn" title="Use my location"><i class="fas fa-location-arrow"></i></button>
+                    <div class="unit-toggle">
+                        <span class="unit active" data-unit="celsius">°C</span>
+                        <span class="unit" data-unit="fahrenheit">°F</span>
+                    </div>
+                </div>
+                <div class="suggestions-container" id="suggestions-container"></div>
+                <div class="error-message" id="error-message"></div>
+            </div>
+
+            <div class="weather-display">
+                <div class="location-info">
+                    <h2 id="current-location">--</h2>
+                    <div class="current-date" id="current-date">--</div>
+                </div>
+                
+                <div class="current-weather">
+                    <div class="weather-main">
+                        <div class="weather-icon" id="weather-icon">
+                            <i class="wi wi-day-sunny"></i>
+                        </div>
+                        <div class="temperature" id="temperature">--°</div>
+                        <div class="weather-description" id="weather-description">--</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="wi wi-humidity"></i>
+                            <span id="humidity">--%</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-strong-wind"></i>
+                            <span id="wind">-- km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-barometer"></i>
+                            <span id="pressure">-- hPa</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-sunrise"></i>
+                            <span id="sunrise">--:--</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="wi wi-sunset"></i>
+                            <span id="sunset">--:--</span>
+                        </div>
+                        <div class="detail-item map-item" id="map-btn">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>View on Map</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-container">
+                    <h2 class="forecast-title">5-Day Forecast</h2>
+                    <div class="forecast-days" id="forecast-days">
+                        <!-- Forecast items will be added dynamically -->
+                        <div class="forecast-day">
+                            <div class="forecast-date">Day 1</div>
+                            <div class="forecast-icon"><i class="wi wi-day-cloudy"></i></div>
+                            <div class="forecast-temp">
+                                <span class="max-temp">25°</span>
+                                <span class="min-temp">18°</span>
+                            </div>
+                        </div>
+                        <!-- More forecast days will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Weather data provided by OpenWeatherMap</p>
+            <p>&copy; <span id="current-year"></span> WeatherSphere. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
